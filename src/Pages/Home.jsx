@@ -4,10 +4,7 @@ import Navbar from "../Components/Navbar";
 const Home = () => {
   return (
     <div>
-      {/* <Navbar></Navbar> */}
-      <div className="h-[70px]">
-        <Nav></Nav>
-      </div>
+      <h2>Home Page</h2>
     </div>
   );
 };

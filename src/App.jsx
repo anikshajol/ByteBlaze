@@ -1,14 +1,14 @@
+import { Outlet } from "react-router";
 import "./App.css";
-import Blogs from "./Pages/Blogs";
-import Bookmarks from "./Pages/Bookmarks";
-import Home from "./Pages/Home";
+import Nav from "./Components/Nav";
 
 function App() {
   return (
     <>
-      <Home></Home>
-      <Blogs />
-      <Bookmarks />
+      <div className="h-16">
+        <Nav></Nav>
+      </div>
+      <Outlet />
     </>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BsToggleOff, BsToggleOn } from "react-icons/bs";
-
+import { Link, NavLink } from "react-router";
+import "./Nav.css";
 const Nav = () => {
   const [theme, setTheme] = useState(
     () => localStorage.getItem("theme") || "light"
@@ -22,9 +23,12 @@ const Nav = () => {
     <nav className="navbar bg-base-100 shadow-lg fixed z-10 px-12">
       {/* logo */}
       <div className="flex-1 ">
-        <a className="btn gap-0 btn-ghost text-2xl font-bold text-pink-500">
+        <Link
+          to={"/"}
+          className="btn gap-0 btn-ghost text-2xl font-bold text-pink-500"
+        >
           Byte<span className="text-blue-900">Blaze</span>
-        </a>
+        </Link>
       </div>
       {/* navigation link */}
       <div className="flex-none">
@@ -34,13 +38,35 @@ const Nav = () => {
           }`}
         >
           <li>
-            <a>Home</a>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "text-red-600 font-bold" : "font-bold"
+              }
+              to={"/"}
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <a>Blogs</a>
+            <NavLink
+              className={({ isActive, isPending }) =>
+                `${isActive ? "text-primary font-bold" : "font-bold"}
+               ${isPending ? "loading-spinner" : ""}`.trim()
+              }
+              to={"/blogs"}
+            >
+              Blogs
+            </NavLink>
           </li>
           <li>
-            <a>Bookmarks</a>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "text-primary font-bold" : "font-bold"
+              }
+              to={"/bookmarks"}
+            >
+              Bookmarks
+            </NavLink>
           </li>
           <li>
             <span onClick={handleToggle}>
