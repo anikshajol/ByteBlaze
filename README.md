@@ -2,8 +2,6 @@
 
 ## 🚀 Features
 
-## 🚀 Features
-
 - ⚡ Modern React component architecture
 - 🎨 TailwindCSS utility-first styling
 - 🌼 Beautiful UI with DaisyUI components
