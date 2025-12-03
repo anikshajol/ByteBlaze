@@ -18,6 +18,7 @@
 - [TailwindCSS](https://tailwindcss.com/)
 - [DaisyUI](https://daisyui.com/)
 - [React Icons](https://react-icons.github.io/react-icons/)
+- [React Router](https://reactrouter.com/)
 
 Anik Shajol
 📍 Bangladesh

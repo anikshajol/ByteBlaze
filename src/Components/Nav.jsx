@@ -28,7 +28,11 @@ const Nav = () => {
       </div>
       {/* navigation link */}
       <div className="flex-none">
-        <ul className="flex items-center gap-6 px-1 cursor-pointer font-semibold">
+        <ul
+          className={`flex items-center gap-6 px-1 cursor-pointer font-semibold ${
+            isDark ? "text-white" : "text-black"
+          }`}
+        >
           <li>
             <a>Home</a>
           </li>

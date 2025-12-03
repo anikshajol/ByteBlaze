@@ -5,7 +5,9 @@ const Home = () => {
   return (
     <div>
       {/* <Navbar></Navbar> */}
-      <Nav></Nav>
+      <div className="h-[70px]">
+        <Nav></Nav>
+      </div>
     </div>
   );
 };
