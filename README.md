@@ -19,6 +19,10 @@
 - [DaisyUI](https://daisyui.com/)
 - [React Icons](https://react-icons.github.io/react-icons/)
 - [React Router](https://reactrouter.com/)
+- [TailwindCss Buttons](http://devdojo.com/tailwindcss/buttons/)
+- [Animated Gradient Text](https://www.andrealves.dev/blog/how-to-make-an-animated-gradient-text-with-tailwindcss/)
+- [MambaUi](https://mambaui.com/components)
+- [Dev.to API Docs](https://developers.forem.com/api/v1#tag/articles/operation/getArticles)
 
 Anik Shajol
 📍 Bangladesh

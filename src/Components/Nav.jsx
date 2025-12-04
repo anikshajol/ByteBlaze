@@ -20,20 +20,20 @@ const Nav = () => {
   }, [theme]);
 
   return (
-    <nav className="navbar bg-base-100 shadow-lg fixed z-10 px-12">
+    <nav className="navbar bg-base-100 shadow-lg fixed z-10 px-8">
       {/* logo */}
       <div className="flex-1 ">
         <Link
           to={"/"}
-          className="btn gap-0 btn-ghost text-2xl font-bold text-pink-500"
+          className="btn gap-0 btn-ghost text-2xl font-bold text-[#F56FD0]"
         >
-          Byte<span className="text-blue-900">Blaze</span>
+          Byte<span className="text-[#5577FB]">Blaze</span>
         </Link>
       </div>
       {/* navigation link */}
       <div className="flex-none">
         <ul
-          className={`flex items-center gap-6 px-1 cursor-pointer font-semibold ${
+          className={`flex text-sm items-center gap-6 px-1 cursor-pointer font-semibold ${
             isDark ? "text-white" : "text-black"
           }`}
         >
