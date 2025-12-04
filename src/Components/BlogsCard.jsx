@@ -1,11 +1,10 @@
-import { Link, useNavigate } from "react-router";
+import { Link } from "react-router";
 import Loader from "./Loader";
 
 const BlogsCard = ({ blog }) => {
   //   console.log(blog);
   const { id, cover_image, title, description, published_at } = blog;
-  const navigation = useNavigate();
-  const isNavigating = Boolean(navigation.location);
+
   return (
     <>
       {/* {isNavigating && <Loader />} */}

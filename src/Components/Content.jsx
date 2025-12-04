@@ -1,7 +1,7 @@
 import React from "react";
 import { useLoaderData } from "react-router";
 import NoImage from "../assets/404.jpg";
-import rehypeRaw from "rehype-raw";
+
 import Markdown from "react-markdown";
 
 const Content = () => {

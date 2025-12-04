@@ -14,7 +14,7 @@ const Tab = () => {
       <Link
         to=""
         onClick={() => setTabIndex(0)}
-        className={`flex items-center flex-shrink-0 border-gray-200 px-5 py-3 space-x-2 ${
+        className={`flex items-center shrink-0 border-gray-200 px-5 py-3 space-x-2 ${
           tabIndex === 0
             ? "border border-b-0 border-gray-200 rounded-t-lg "
             : "border-b border-gray-200"
@@ -29,7 +29,7 @@ const Tab = () => {
       <Link
         to={`author`}
         onClick={() => setTabIndex(1)}
-        className={`flex items-center flex-shrink-0 border-gray-200 px-5 py-3 space-x-2  ${
+        className={`flex items-center shrink-0 border-gray-200 px-5 py-3 space-x-2  ${
           tabIndex === 1
             ? "border border-b-0 border-gray-200 rounded-t-lg "
             : "border-b  border-gray-200"

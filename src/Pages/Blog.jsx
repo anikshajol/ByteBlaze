@@ -1,13 +1,11 @@
 import React from "react";
-import { Outlet, useLoaderData, useNavigation } from "react-router";
+import { Outlet, useLoaderData } from "react-router";
 import Tab from "../Components/Tab";
 import Loader from "../Components/Loader";
 
 const Blog = () => {
   const blog = useLoaderData();
   //   console.log(blog);
-  const navigation = useNavigation();
-  const isNavigating = Boolean(navigation.location);
 
   // if (navigation.state === "loading") return <Loader />;
 
@@ -36,7 +34,7 @@ const Blog = () => {
                   {new Date(blog.published_at).toLocaleDateString()}
                 </p>
               </div>
-              <p className="flex-shrink-0 mt-3 text-sm md:mt-0">
+              <p className="shrink-0 mt-3 text-sm md:mt-0">
                 {blog.comments_count} Comments • {blog.positive_reactions_count}{" "}
                 Views
               </p>
