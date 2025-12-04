@@ -2,10 +2,13 @@ import React from "react";
 import { Outlet, useLoaderData } from "react-router";
 import Tab from "../Components/Tab";
 import Loader from "../Components/Loader";
+import { setToLocalStorage } from "../utilities/localstorage";
 
 const Blog = () => {
   const blog = useLoaderData();
-  //   console.log(blog);
+  const handleAddToBookmark = (blog) => {
+    setToLocalStorage(blog);
+  };
 
   // if (navigation.state === "loading") return <Loader />;
 
@@ -41,7 +44,7 @@ const Blog = () => {
             </div>
           </div>
           <div className="dark:text-gray-800" bis_skin_checked="1">
-            <Tab />
+            <Tab handleAddToBookmark={handleAddToBookmark} blog={blog} />
           </div>
           <Outlet></Outlet>
         </article>

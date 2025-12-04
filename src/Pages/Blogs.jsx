@@ -19,7 +19,10 @@ const Blogs = () => {
         className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12"
         bis_skin_checked="1"
       >
-        <Link className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-50">
+        <Link
+          to={`${blogs[0].id}`}
+          className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-50"
+        >
           <img
             src={blogs[0].cover_image || brokenImage}
             alt=""
@@ -40,7 +43,7 @@ const Blogs = () => {
           className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
           bis_skin_checked="1"
         >
-          {blogs.map((blog) => (
+          {blogs.slice(1, -1).map((blog) => (
             <BlogsCard key={blog.id} blog={blog} />
           ))}
         </div>

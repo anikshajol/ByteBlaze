@@ -1,12 +1,13 @@
 import { Link } from "react-router";
 import Loader from "./Loader";
+import { MdDeleteForever } from "react-icons/md";
 
-const BlogsCard = ({ blog }) => {
+const BlogsCard = ({ blog, handleDeleteFromBookmark, deletable }) => {
   //   console.log(blog);
   const { id, cover_image, title, description, published_at } = blog;
 
   return (
-    <>
+    <div className="flex relative">
       {/* {isNavigating && <Loader />} */}
       <Link
         to={`${id}`}
@@ -27,7 +28,20 @@ const BlogsCard = ({ blog }) => {
           <p>{description}</p>
         </div>
       </Link>
-    </>
+
+      {deletable && (
+        <span
+          onClick={() => handleDeleteFromBookmark(blog)}
+          className="absolute right-2 -top-4 cursor-pointer"
+        >
+          <MdDeleteForever
+            color="#F56FD0"
+            className="bg-[#5577FB] rounded-full"
+            size={30}
+          />
+        </span>
+      )}
+    </div>
   );
 };
 

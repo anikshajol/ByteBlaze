@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { CiBookmark } from "react-icons/ci";
 import { IoBookOutline } from "react-icons/io5";
+import { MdBookmarkAdd } from "react-icons/md";
 
 import { Link } from "react-router";
 
-const Tab = () => {
+const Tab = ({ handleAddToBookmark, blog }) => {
   const [tabIndex, setTabIndex] = useState(0);
+
   return (
     <div
       className="flex items-center -mx-4 overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap dark:bg-gray-100 dark:text-gray-800"
@@ -40,6 +42,13 @@ const Tab = () => {
         </span>
         <span>Author</span>
       </Link>
+
+      <button
+        onClick={() => handleAddToBookmark(blog)}
+        className="ml-4 cursor-pointer"
+      >
+        <MdBookmarkAdd size={28} color="#F56FD0" />
+      </button>
     </div>
   );
 };

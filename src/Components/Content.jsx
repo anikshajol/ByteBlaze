@@ -6,7 +6,7 @@ import Markdown from "react-markdown";
 
 const Content = () => {
   const blog = useLoaderData();
-  console.log(blog);
+  // console.log(blog);
   const { cover_image, title, tags, body_markdown } = blog;
 
   return (
