@@ -1,14 +1,20 @@
 import React from "react";
-import { Link, useLoaderData } from "react-router";
+import { Link, useLoaderData, useNavigation } from "react-router";
 import brokenImage from "../assets/404.jpg";
 import BlogsCard from "../Components/BlogsCard";
+import Loader from "../Components/Loader";
 
 const Blogs = () => {
   const blogs = useLoaderData();
   // console.log(blogs[0]);
+  const navigation = useNavigation();
+  const isNavigating = Boolean(navigation.location);
+
+  // if (navigation.state === "loading") return <Loader />;
 
   return (
     <section className="dark:bg-gray-100 dark:text-gray-800">
+      {isNavigating && <Loader />}
       <div
         className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12"
         bis_skin_checked="1"

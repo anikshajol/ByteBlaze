@@ -7,7 +7,7 @@ import Markdown from "react-markdown";
 const Content = () => {
   const blog = useLoaderData();
   console.log(blog);
-  const { cover_image, title, tags, body_html } = blog;
+  const { cover_image, title, tags, body_markdown } = blog;
 
   return (
     <div className="" bis_skin_checked="1">
@@ -37,8 +37,8 @@ const Content = () => {
           <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
             {title}
           </h3>
-          {/* <span className="text-xs dark:text-gray-600">{}</span> */}
-          <Markdown rehypePlugins={[rehypeRaw]}>{body_html}</Markdown>
+          <span className="text-lg dark:text-gray-600">{body_markdown}</span>
+          {/* <Markdown rehypePlugins={[rehypeRaw]}>{body_html}</Markdown> */}
         </div>
       </div>
     </div>

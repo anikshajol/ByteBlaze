@@ -49,9 +49,8 @@ const Nav = () => {
           </li>
           <li>
             <NavLink
-              className={({ isActive, isPending }) =>
-                `${isActive ? "text-primary font-bold" : "font-bold"}
-               ${isPending ? "loading-spinner" : ""}`.trim()
+              className={({ isActive }) =>
+                `${isActive ? "text-primary font-bold" : "font-bold"}`
               }
               to={"/blogs"}
             >

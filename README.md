@@ -23,6 +23,9 @@
 - [Animated Gradient Text](https://www.andrealves.dev/blog/how-to-make-an-animated-gradient-text-with-tailwindcss/)
 - [MambaUi](https://mambaui.com/components)
 - [Dev.to API Docs](https://developers.forem.com/api/v1#tag/articles/operation/getArticles)
+- [React Markdown](https://www.npmjs.com/package/react-markdown)
+- [Rehperaw](https://www.npmjs.com/package/rehype-raw)
+- [React-Spinner](https://www.npmjs.com/package/react-spinners)
 
 Anik Shajol
 📍 Bangladesh
